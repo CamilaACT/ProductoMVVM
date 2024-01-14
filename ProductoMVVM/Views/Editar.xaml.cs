@@ -3,16 +3,14 @@ using ProductoMVVM.ViewModels;
 
 namespace ProductoMVVM.Views;
 
-public partial class Detalle : ContentPage
+public partial class Editar : ContentPage
 {
-    private readonly DetalleViewModel _viewModel;
-    public Detalle(Producto producto)
+    private readonly EditarViewModel _viewModel;
+    public Editar(Producto producto)
 	{
 		InitializeComponent();
-		_viewModel = new DetalleViewModel();
+        _viewModel = new EditarViewModel();
         BindingContext = _viewModel;
         _viewModel.cargarDetalles(producto);
-
     }
-
 }

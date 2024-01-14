@@ -1,12 +1,16 @@
-﻿namespace ProductoMVVM
+﻿using ProductoMVVM.Services;
+using ProductoMVVM.Views;
+
+namespace ProductoMVVM
 {
     public partial class App : Application
     {
+        public static ProductRepository ProductRepository { get; set; }
         public App()
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
+            ProductRepository = new ProductRepository();
+            MainPage = new NavigationPage(new ProductoPage1());
         }
     }
 }

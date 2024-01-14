@@ -4,9 +4,45 @@
              x:Class="ProductoMVVM.Views.Detalle"
              Title="Detalle">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <Image Source="dotnet_bot.png"
+               HeightRequest="200" />
+
+        <Label x:Name="Nombre"
+               Text="{Binding Nombre}"
+               FontSize="32"
+               HorizontalOptions="Center" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Cantidad: "
+                   FontSize="18" />
+            <Label x:Name="Cantidad"
+                   Text="{Binding Cantidad}"
+                   FontSize="18" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Descripcion: "
+                   FontSize="18" />
+            <Label x:Name="Descripcion"
+                   Text="{Binding Descripcion}"
+                   FontSize="18" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="EditarBtn"
+                    Text="Editar"
+                    FontSize="20"
+                    Margin="5"
+                    HorizontalOptions="FillAndExpand"
+                    />
+            <Button x:Name="BorrarBtn"
+                    Text="Borrar"
+                    FontSize="20"
+                    Margin="5"
+                    BackgroundColor="Red"
+                    HorizontalOptions="FillAndExpand"
+                    />
+
+        </StackLayout>
+
+
     </VerticalStackLayout>
 </ContentPage>

@@ -1,4 +1,5 @@
-﻿using AuthenticationServices;
+﻿//using AuthenticationServices;
+using PropertyChanged;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 namespace ProductoMVVM.Models
 {
     [Table("Productos")]
+    [AddINotifyPropertyChangedInterface]
     public class Producto
     {
         [PrimaryKey, AutoIncrement]
@@ -16,7 +18,7 @@ namespace ProductoMVVM.Models
         [Column("nombre")]
         public string Nombre { get; set; }
         [Column("descripcion")]
-        public string Description { get; set; }
+        public string Descripcion { get; set; }
         [Column("cantidad")]
         public int Cantidad { get; set; }
     }
