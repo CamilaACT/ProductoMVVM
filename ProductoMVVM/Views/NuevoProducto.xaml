@@ -19,6 +19,12 @@
             </TableRoot>
         </TableView>
         <Button Text="Guardad Producto"
+                FontSize="20"
+                BackgroundColor="#3498db"
+                TextColor="White"
+                CornerRadius="5"
+                Margin="30,30,30,30"
+                HorizontalOptions="Fill"
                 Command="{Binding GuardarProducto}"/>
     </VerticalStackLayout>
 </ContentPage>

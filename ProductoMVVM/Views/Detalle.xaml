@@ -5,7 +5,7 @@
              Title="Detalle">
     <VerticalStackLayout>
 
-        <Image Source="dotnet_bot.png"
+        <Image Source="paquete.png"
                HeightRequest="200" />
 
         <Label x:Name="Nombre"
@@ -38,6 +38,7 @@
                     Text="Editar"
                     FontSize="20"
                     Margin="5"
+                    BackgroundColor="#3498db"
                     HorizontalOptions="FillAndExpand"
                     Command="{Binding EditarProducto}" />
             <Button x:Name="BorrarBtn"

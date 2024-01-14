@@ -2,28 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProductoMVVM.Views.Editar"
-             Title="Editar">
-    <VerticalStackLayout>
-
-        <TableView>
-            <TableRoot>
-                <TableSection Title="Ingrese los datos para editar">
-                    <EntryCell Text="{Binding Nombre}"
-                               Placeholder="Nombre" />
-                    <EntryCell Text="{Binding Cantidad}"
-                               Placeholder="Cantidad"
-                               Keyboard="Numeric" />
-                    <EntryCell Text="{Binding Descripcion}"
-                               Placeholder="Descripcion" />
-
-                </TableSection>
-            </TableRoot>
-        </TableView>
-        <Button Text="Guardad Producto"
-                Command="{Binding EditarProducto}" />
-
-
-
-
+             Title="Editar"
+             BackgroundColor="SkyBlue">
+    <VerticalStackLayout Padding="20">
+        <Frame BorderColor="#2c3e50"
+               CornerRadius="10"
+               HasShadow="True"
+               BackgroundColor="White"
+               Padding="10">
+            <TableView>
+                <TableRoot>
+                    <TableSection Title="Ingrese los datos para editar">
+                        <EntryCell Text="{Binding Nombre}"
+                                   Placeholder="Nombre" />
+                        <EntryCell Text="{Binding Cantidad}"
+                                   Placeholder="Cantidad"
+                                   Keyboard="Numeric" />
+                        <EntryCell Text="{Binding Descripcion}"
+                                   Placeholder="Descripcion" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </Frame>
+        <Button Text="Guardar Producto"
+                Command="{Binding EditarProducto}"
+                BackgroundColor="#2c3e50"
+                TextColor="White"
+                CornerRadius="5"
+                Margin="10,20,10,0"
+                HorizontalOptions="Fill" />
     </VerticalStackLayout>
 </ContentPage>
