@@ -13,6 +13,13 @@
                FontSize="32"
                HorizontalOptions="Center" />
         <StackLayout Orientation="Horizontal">
+            <Label Text="IdProducto: "
+                   FontSize="18" />
+            <Label x:Name="IdProducto"
+                   Text="{Binding IdProducto}"
+                   FontSize="18" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
             <Label Text="Cantidad: "
                    FontSize="18" />
             <Label x:Name="Cantidad"
@@ -32,14 +39,14 @@
                     FontSize="20"
                     Margin="5"
                     HorizontalOptions="FillAndExpand"
-                    />
+                    Command="{Binding EditarProducto}"/>
             <Button x:Name="BorrarBtn"
                     Text="Borrar"
                     FontSize="20"
                     Margin="5"
                     BackgroundColor="Red"
                     HorizontalOptions="FillAndExpand"
-                    />
+                    Command="{Binding BorrarProducto}"/>
 
         </StackLayout>
 
