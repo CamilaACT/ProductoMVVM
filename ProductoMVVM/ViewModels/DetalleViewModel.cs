@@ -18,17 +18,20 @@ namespace ProductoMVVM.ViewModels
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public int Cantidad { get; set; }
-        public DetalleViewModel() //Constructor
+        public DetalleViewModel(Producto productp) //Constructor
         { 
-            
+            _producto = productp;
         }
-        public void cargarDetalles(Producto productp)
+        public void cargarDetalles()
         {
-            Nombre=productp.Nombre;
-            Descripcion=productp.Descripcion;
-            Cantidad=productp.Cantidad;
-            IdProducto = productp.IdProducto;
-            _producto=productp;
+            Producto proctoactual= App.ProductRepository.Get(_producto.IdProducto);
+            Nombre=proctoactual.Nombre;
+            Descripcion=proctoactual.Descripcion;
+            Cantidad=proctoactual.Cantidad;
+            IdProducto = proctoactual.IdProducto;
+            _producto=proctoactual;
+
+                
         }
         
 

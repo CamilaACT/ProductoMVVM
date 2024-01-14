@@ -39,14 +39,14 @@
                     FontSize="20"
                     Margin="5"
                     HorizontalOptions="FillAndExpand"
-                    Command="{Binding EditarProducto}"/>
+                    Command="{Binding EditarProducto}" />
             <Button x:Name="BorrarBtn"
                     Text="Borrar"
                     FontSize="20"
                     Margin="5"
                     BackgroundColor="Red"
                     HorizontalOptions="FillAndExpand"
-                    Command="{Binding BorrarProducto}"/>
+                    Command="{Binding BorrarProducto}" />
 
         </StackLayout>
 

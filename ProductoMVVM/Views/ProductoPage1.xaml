@@ -2,12 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProductoMVVM.Views.ProductoPage1"
-             Title="ProductoPage1">
+             Title="ProductoPage1"
+             BackgroundColor="White">
     <VerticalStackLayout>
-        <HorizontalStackLayout BackgroundColor="DarkBlue">
+        <HorizontalStackLayout BackgroundColor="#2980b9"
+                               HeightRequest="70"
+                               Padding="10,0,10,0">
             <Image Source="dotnet_bot.png"
                    HeightRequest="50"
-                   WidthRequest="100" />
+                   WidthRequest="100"
+                   Aspect="AspectFit" />
             <Label x:Name="Username"
                    Text="Productos"
                    FontSize="30"
@@ -17,37 +21,41 @@
         </HorizontalStackLayout>
         <Button Text="Nuevo Producto"
                 FontSize="20"
+                BackgroundColor="#3498db"
+                TextColor="White"
+                CornerRadius="5"
+                Margin="30,30,30,30"
                 HorizontalOptions="Fill"
                 Command="{Binding CrearProducto}" />
 
         <ListView x:Name="listaProductos"
                   RowHeight="80"
                   ItemsSource="{Binding ListaProductos}"
-                  ItemSelected="SeleccionarProducto">
+                  ItemSelected="SeleccionarProducto"
+                  BackgroundColor="#ecf0f1"
+                  SeparatorVisibility="None">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="dotnet_bot.png"
+                        <StackLayout Orientation="Horizontal"
+                                     Padding="10,5,10,5">
+                            <Image Source="paquete.png"
                                    HeightRequest="50"
-                                   WidthRequest="100" />
-                            <StackLayout Orientation="Vertical">
+                                   WidthRequest="100"
+                                   Aspect="AspectFit" />
+                            <StackLayout Orientation="Vertical"
+                                         Spacing="5">
                                 <Label Text="{Binding Nombre}"
-                                       VerticalOptions="Start"
-                                       FontSize="20" />
+                                       FontSize="20"
+                                       TextColor="#2c3e50" />
                                 <Label Text="{Binding Cantidad}"
-                                       VerticalOptions="End"
-                                       FontSize="20" />
+                                       FontSize="20"
+                                       TextColor="#2c3e50" />
                             </StackLayout>
                         </StackLayout>
-
                     </ViewCell>
-
                 </DataTemplate>
             </ListView.ItemTemplate>
-
-
         </ListView>
-
     </VerticalStackLayout>
 </ContentPage>

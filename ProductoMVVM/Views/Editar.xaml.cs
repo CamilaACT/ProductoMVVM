@@ -13,4 +13,10 @@ public partial class Editar : ContentPage
         BindingContext = _viewModel;
         _viewModel.cargarDetalles(producto);
     }
+    //public Editar(EditarViewModel viewModel)
+    //{
+    //    InitializeComponent();
+    //    _viewModel = viewModel;
+    //    BindingContext = _viewModel;
+    //}
 }

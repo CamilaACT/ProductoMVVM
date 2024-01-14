@@ -10,15 +10,16 @@ public partial class Detalle : ContentPage
     public Detalle(Producto producto)
 	{
 		InitializeComponent();
-		_viewModel = new DetalleViewModel();
+		_viewModel = new DetalleViewModel(producto);
         BindingContext = _viewModel;
-        _viewModel.cargarDetalles(producto);
+        _viewModel.cargarDetalles();
         _producto = producto;
 
     }
     protected override async void OnAppearing()
     {
-        _viewModel.cargarDetalles(_producto);
+
+        _viewModel.cargarDetalles();
     }
 
 }
